@@ -17,10 +17,20 @@
 // export default App;
 
 
+// import Timer from "./timer";
+
+// function App() {
+//   return <Timer />;
+// }
+
+// export default App;
+
+
 import Timer from "./timer";
+import User from "./user";
 
 function App() {
-  return <Timer />;
+  return <User />;
 }
 
 export default App;
