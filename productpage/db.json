@@ -1,3 +1,28 @@
 {
-  "products": []
+  "products": [
+    {
+      "id": "dfa9",
+      "name": "dgbvsfd",
+      "price": 6358962413,
+      "category": "gvfdhbfxrd"
+    },
+    {
+      "id": "af87",
+      "name": "fshjnabg",
+      "price": 216785,
+      "category": "gfjnrswe64tjhunyrtgdhbws"
+    },
+    {
+      "id": "ce9d",
+      "name": "Punit",
+      "price": 111,
+      "category": "Punit-asfhiku"
+    },
+    {
+      "id": "28c6",
+      "name": "shop",
+      "price": 2555,
+      "category": "shop"
+    }
+  ]
 }

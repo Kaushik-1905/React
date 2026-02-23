@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -6,44 +6,36 @@ function AddProduct() {
   const [product, setProduct] = useState({
     name: "",
     price: "",
-    image: "",
     category: ""
   });
 
   const navigate = useNavigate();
 
+  // ✅ Protect route (admin only)
+  useEffect(() => {
+    const role = localStorage.getItem("role");
+
+    if (role !== "admin") {
+      navigate("/login");
+    }
+  }, [navigate]);
+
   const handleChange = (e) => {
     setProduct({ ...product, [e.target.name]: e.target.value });
-  };
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-
-    reader.onloadend = () => {
-      setProduct((prev) => ({
-        ...prev,
-        image: reader.result
-      }));
-    };
-
-    reader.readAsDataURL(file);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/products", {
+      await axios.post("http://localhost:5001/products", {
         ...product,
         price: Number(product.price)
       });
 
       navigate("/");
     } catch (error) {
-      console.error("Error adding product:", error);
+      console.error(error);
       alert("Failed to add product");
     }
   };
@@ -57,6 +49,7 @@ function AddProduct() {
           type="text"
           name="name"
           placeholder="Product Name"
+          value={product.name}
           onChange={handleChange}
           required
         />
@@ -66,33 +59,17 @@ function AddProduct() {
           type="number"
           name="price"
           placeholder="Price"
+          value={product.price}
           onChange={handleChange}
           required
         />
         <br /><br />
 
         <input
-          type="file"
-          accept="image/*"
-          onChange={handleImageChange}
-        />
-        <br /><br />
-
-        {product.image && (
-          <img
-            src={product.image}
-            alt="Preview"
-            width="150"
-            style={{ border: "1px solid gray" }}
-          />
-        )}
-
-        <br /><br />
-
-        <input
           type="text"
           name="category"
           placeholder="Category"
+          value={product.category}
           onChange={handleChange}
           required
         />

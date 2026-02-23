@@ -13,7 +13,7 @@ import Visa from './Header/Visa'
 import Pages from './Header/Pages'
 import Blog from './Header/Blog'
 import Contact from './Header/Contact'
-
+import Main from './Header/Main'
 
 
 function App() {
@@ -32,6 +32,8 @@ function App() {
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
       </Routes>
+
+      <Main/>
     </>
   )
 }
