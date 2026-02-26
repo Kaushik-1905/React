@@ -1,0 +1,11 @@
+.container{
+    background-image: url(/public/Rectangle-1.png);
+    height: 100vh;
+    max-width: 100% !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text{
+    color: white;
+}

@@ -1,5 +1,5 @@
 {
-  "name": "globalvisa",
+  "name": "ecommerces",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,11 +11,12 @@
   },
   "dependencies": {
     "@remixicon/react": "^4.9.0",
-    "bootstrap": "^5.3.8",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.13.0"
+    "react-slick": "^0.31.0",
+    "remixicon": "^4.9.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

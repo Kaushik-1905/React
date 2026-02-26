@@ -1,77 +1,122 @@
 import React from 'react';
-import { BiBorderRadius } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+import {
+  RiMailLine,
+  RiMapPinFill,
+  RiFacebookCircleFill,
+  RiLinkedinFill,
+  RiInstagramLine
+} from 'react-icons/ri';
 
 const container = {
-  maxWidth: '1600px',
-  // margin: '0 38.8px',
+  maxWidth: '100%',
   padding: '0 80px',
-  borderBottom: '2px solid #c04b62'
-}
+  borderBottom: '2px solid #c04b62',
+  backgroundColor: '#c04b62',
+  margin: '0',
+};
 
-const ul = {
-  listStyle: 'none',
-  display: 'flex'
-}
+const flex = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: '20px',
+  color: 'white'
+};
 
-const li = {
-  padding: '10px',
+const header = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  padding: '10px 0',
+  maxWidth: '100%',
+
+};
+
+
+const textReset = {
+  margin: 0,
+};
+
+const text = {
+  color: 'white',
   textDecoration: 'none',
-  color: 'black'
 }
 
-const quote = {
-  textDecoration: 'none',
-  display: 'block',
-  backgroundColor:'#c04b62',
-  color:'white',
-  padding:'8px 10px',
-  borderRadius:'50px',
-  fontWeight: '700',
-  margin:'0 0 0 20px' 
-}
+
+
 
 
 
 const Nav = () => {
   return (
-    <div style={container}>
+    <>
+      <style>
+        {`
+          .social-icon {
+            color: white;
+            transition: color 1s ease;
+            cursor: pointer;
+          }
 
-      {/* Upper Header */}
-      <div>
+          .social-icon:hover {
+            color: black;
+          }
 
-      </div>
+          .nav-link {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 4px;
+  }
 
-      {/* Lower Header */}
-      <div style={{display: 'flex',justifyContent: 'space-between',alignItems: 'center',padding: '20px 0px',}}>
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 2s ease;   
+  }
 
-        {/* Logo Section */}
-        <Link to="/">
-          <img src="/logo.svg" alt="Logo" style={{ height: '30px' }} />
-        </Link>
+  .nav-link:hover::after {
+    width: 100%;
+  }
+          
+        `}
+      </style>
 
-        {/* Nav Bar */}
-        <ul style={ul}>
-          <li><Link to='/' style={li}>Home</Link></li>
-          <li><Link to='/about' style={li}>About</Link></li>
-          <li><Link to='/visa' style={li}>Visa</Link></li>
-          <li><Link to='/pages' style={li}>Pages</Link></li>
-          <li><Link to='/blog' style={li}>Blog</Link></li>
-          <li><Link to='/contact' style={li}>Contact</Link></li>
-        </ul>
+      <div style={container}>
+        {/* Upper Header */}
+        <div style={header}>
+          <div style={flex}>
+            <div style={flex}>
+              <RiMailLine />
+              <p style={textReset}>info@example.com</p>
+            </div>
 
-        {/* Icon */}
-        <div style={{ display: 'flex' }}>
-          <Link to='/'>
-            <img src="/search.svg" alt="" style={{ height: '25px' }} />
-          </Link>
+            <div style={flex}>
+              <RiMapPinFill />
+              <p style={textReset}>
+                55 Main Street, 2nd block, Melbourne, Australia
+              </p>
+            </div>
+          </div>
 
-          <Link to='/' style={quote}>Get A Quote</Link>
+          <div style={flex}>
+            <RiFacebookCircleFill className="social-icon" />
+            <RiLinkedinFill className="social-icon" />
+            <RiInstagramLine className="social-icon" />
 
+            <Link className="nav-link" to="/">Help</Link>
+            <Link className="nav-link" to="/support">Support</Link>
+            <Link className="nav-link" to="/faq">FAQ</Link>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
-}
+};
 
 export default Nav;

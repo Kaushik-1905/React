@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 
@@ -14,10 +12,10 @@ import Pages from './Header/Pages'
 import Blog from './Header/Blog'
 import Contact from './Header/Contact'
 import Main from './Header/Main'
+import LowerHeader from './Header/LowerHeader'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -32,6 +30,8 @@ function App() {
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
       </Routes>
+
+      <LowerHeader/>
 
       <Main/>
     </>
