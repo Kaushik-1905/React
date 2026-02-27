@@ -1,8 +1,13 @@
 import React from "react";
 import "./assets/Protfolio.css";
-import { motion } from "framer-motion";
-import { Mail, ArrowUpRight } from "lucide-react";
-import "./assets/Protfolio.css";
+
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Mail, ArrowUpRight, ArrowLeft, ArrowRight } from "lucide-react";
+
+import project01 from "./assets/project01.png";
+import project02 from "./assets/project02.png";
+import project03 from "./assets/project03.png";
 
 
 export default function App() {
@@ -88,26 +93,61 @@ function About() {
           </p>
         </div>
         <div className="about-card">
-            <img src="/your-photo.jpg" alt="Profile" />
+            <img src="/src/assets/photo.jpg" alt="Profile" />
         </div>
       </div>
     </section>
   );
 }
 
+
 function Work() {
+  const projects = [
+    { id: "01", image: project01, title: "Luxury Brand Site" },
+    { id: "02", image: project02, title: "Premium Portfolio" },
+    { id: "03", image: project03, title: "E-commerce Experience" },
+  ];
+
+  const [[index, direction], setIndex] = useState([0, 0]);
+
+  const paginate = (newDirection) => {
+    setIndex([
+      (index + newDirection + projects.length) % projects.length,
+      newDirection,
+    ]);
+  };
+
   return (
     <section id="work" className="section">
       <h3 className="center">Selected Work</h3>
-      <div className="work-grid">
-        {["01", "02", "03"].map((item) => (
-          <div key={item} className="work-card">
+
+      <div className="slider-container">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={index}
+            className="slide"
+            initial={{ x: direction > 0 ? 300 : -300, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: direction > 0 ? -300 : 300, opacity: 0 }}
+            transition={{ duration: 0.6 }}
+            style={{
+              backgroundImage: `url(${projects[index].image})`,
+            }}
+          >
             <div className="work-overlay">
-              <h4>Project {item}</h4>
+              <h4>{projects[index].title}</h4>
               <p>Premium Web Experience</p>
             </div>
-          </div>
-        ))}
+          </motion.div>
+        </AnimatePresence>
+
+        <button className="nav-btn left" onClick={() => paginate(-1)}>
+          <ArrowLeft size={20} />
+        </button>
+
+        <button className="nav-btn right" onClick={() => paginate(1)}>
+          <ArrowRight size={20} />
+        </button>
       </div>
     </section>
   );
@@ -121,7 +161,7 @@ function Contact() {
         Ready to elevate your brand with a refined digital presence? Let’s
         create something extraordinary together.
       </p>
-      <a href="mailto:youremail@example.com" className="gold-btn">
+      <a href="mailto:kaushikdagaya1902@example.com" className="gold-btn">
         <Mail size={18} /> Contact Me
       </a>
     </section>
