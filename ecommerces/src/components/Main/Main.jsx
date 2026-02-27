@@ -23,7 +23,7 @@ const Main = () => {
   const settings = {
     dots: true,
     infinite: true,
-    arrows: true,
+    arrows: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -74,20 +74,26 @@ const Main = () => {
         {/* RIGHT SIDE */}
         <div className="hero-right">
           <div className="product-card">
-            <div className="flex">
-              <div className="image">
-                <img src={productImg1} alt="productImage" />
+            <span className="badge">5%</span>
+
+            <div className="image">
+              <img src={productImg1} alt="productImage" />
+            </div>
+
+            <div>
+              <h5>Blood orange with kale</h5>
+
+              <div className="price">
+                €16,00 <span className="old-price">€20,00</span>
               </div>
-              <div>
-                <h5>Blood orange with kale</h5>
-                <ul className="flex">
-                  <li className="icons"><RiStarLine /></li>
-                  <li className="icons"><RiStarLine /></li>
-                  <li className="icons"><RiStarLine /></li>
-                  <li className="icons"><RiStarLine /></li>
-                  <li className="icons"><RiStarLine /></li>
-                </ul>
-              </div>
+
+              <ul>
+                <li className="icons"><RiStarLine /></li>
+                <li className="icons"><RiStarLine /></li>
+                <li className="icons"><RiStarLine /></li>
+                <li className="icons"><RiStarLine /></li>
+                <li className="icons"><RiStarLine /></li>
+              </ul>
             </div>
           </div>
           <div className="product-card">Product 2</div>

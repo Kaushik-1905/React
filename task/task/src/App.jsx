@@ -19,19 +19,11 @@
 // export default App;
 
 
-import React from "react";
-import Counter from "./Couter1";
 
-const App = () => {
-  const handleClick = (count) => {
-    console.log("Current Count:", count);
-  };
+import Counter from './Counter'
 
-  return (
-    <div>
-      <Counter onButtonClick={handleClick} />
-    </div>
-  );
-};
+function App() {
+  return <Counter />
+}
 
-export default App;
+export default App

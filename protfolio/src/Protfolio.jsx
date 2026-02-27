@@ -54,8 +54,8 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        Designing Digital <br />
-        <span className="gradient-text">Luxury Experiences</span>
+        Engineering Intelligent <br />
+        <span className="gradient-text">Digital Systems</span>
       </motion.h2>
 
       <motion.p
