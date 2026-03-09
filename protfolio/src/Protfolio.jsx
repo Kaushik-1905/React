@@ -1,5 +1,6 @@
 import React from "react";
 import "./assets/Protfolio.css";
+import { Link } from "react-router-dom";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -14,8 +15,8 @@ export default function App() {
   return (
     <div className="app">
       <BackgroundGlow />
-      <Navbar />
-      <Hero />  
+      {/* <Navbar /> */}
+      <Hero />
       <About />
       <Work />
       <Contact />
@@ -33,18 +34,20 @@ function BackgroundGlow() {
   );
 }
 
-function Navbar() {
-  return (
-    <nav className="navbar">
-      <h1 className="logo">KAUSHIK</h1>
-      <div className="nav-links">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  );
-}
+// function Navbar() {
+//   return (
+//     <nav className="navbar">
+//       <h1 className="logo">KAUSHIK</h1>
+
+//       <div className="nav-links">
+//         <Link to="/about">About</Link>
+//         <a href="#work">Work</a>
+//         <Link to="/contact">Contact</Link>
+//       </div>
+//     </nav>
+//   );
+// }
+
 
 function Hero() {
   return (
@@ -93,7 +96,7 @@ function About() {
           </p>
         </div>
         <div className="about-card">
-            <img src="/src/assets/photo.jpg" alt="Profile" />
+          <img src="/src/assets/photo.jpg" alt="Profile" />
         </div>
       </div>
     </section>

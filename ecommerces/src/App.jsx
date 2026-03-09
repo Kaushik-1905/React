@@ -1,21 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './components/Header/Header';
-import Nav from './components/Nav/Nav';
-import Main from './components/Main/Main'
+import { useState } from "react";
+import "./App.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import Header from "./components/Header/Header";
+import Nav from "./components/Nav/Nav";
+import HeroSlider from "./components/Main/HeroSlider";
+import About from "./components/Main/About";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <Header/>
-      <Nav/>
-      <Main/>
-    </>
-  )
+    <div>
+      <Header />
+      <Nav />
+      <HeroSlider />
+      <About/>
+    </div>
+  );
 }
 
-export default App
+export default App;
