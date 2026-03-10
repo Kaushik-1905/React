@@ -18,24 +18,24 @@ const features = [
 const About = () => {
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="text-center">
 
         {/* Title */}
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-wide text-indigo-900 mb-14">
+        <h2>
           WHAT MAKES US DIFFERENT?
         </h2>
 
         {/* Features */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-10">
+        <div className="flex">
 
           {features.map((item, index) => (
-            <div key={index} className="flex flex-col items-center space-y-4">
+            <div key={index}>
               
-              <div className={`w-20 h-20 rounded-full ${item.bg} flex items-center justify-center`}>
-                <img src={item.img} alt={item.text} className="w-8 h-8 object-contain" />
+              <div>
+                <img src={item.img} alt={item.text}/>
               </div>
 
-              <p className="text-gray-700 font-medium">{item.text}</p>
+              <p>{item.text}</p>
 
             </div>
           ))}

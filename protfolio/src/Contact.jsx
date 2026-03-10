@@ -457,7 +457,7 @@ export default function Contact() {
             <div>
               <div className="section-label" style={{ marginBottom: "16px" }}>Socials</div>
               <div className="social-row">
-                {["LinkedIn", "GitHub", "Dribbble", "Twitter / X"].map((s) => (
+                {["LinkedIn", "GitHub", "Twitter / X"].map((s) => (
                   <a href="#" className="social-link" key={s}>
                     <span>{s}</span>
                     <ArrowUpRight size={16} />
