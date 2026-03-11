@@ -95,7 +95,6 @@ const Navbar = () => {
 
           <li style={{ marginLeft: "0.75rem" }}>
             <button
-              onClick={openWhatsApp}
               className="nav-cta-btn"
               style={{
                 border: "1.5px solid #FF4D5A",
@@ -177,7 +176,7 @@ const Navbar = () => {
             </Link>
           ))}
           <button
-            onClick={() => { openWhatsApp(); setMenuOpen(false); }}
+            onClick={() => { setMenuOpen(false); }}
             style={{
               marginTop: "1rem", background: "#FF4D5A", border: "none",
               borderRadius: "10px", color: "#fff", padding: "0.75rem",
@@ -185,7 +184,7 @@ const Navbar = () => {
               fontFamily: "inherit", transition: "background 0.2s ease",
             }}
           >
-            Let's Talk 
+            Let's Talk
           </button>
         </div>
       )}
