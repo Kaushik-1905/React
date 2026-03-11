@@ -31,41 +31,6 @@ const Hero = () => {
         className="relative w-full max-w-6xl bg-[#223E6B] rounded-2xl border border-white/30 shadow-2xl p-10"
       >
 
-        {/* Navbar */}
-        <motion.div
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex justify-between items-center mb-16"
-        >
-          <h1 className="text-xl font-bold text-white">
-            <span className="text-[#FF4D5A]">Kaushik</span>
-          </h1>
-
-          <ul className="flex gap-8 text-white/80 font-medium">
-            {["Home", "About", "Portfolio", "Blog"].map((item, index) => (
-              <motion.li
-                key={index}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="hover:text-[#FF4D5A] cursor-pointer transition"
-              >
-                {item}
-              </motion.li>
-            ))}
-
-            <motion.li
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-            >
-              <button className="border border-[#FF4D5A] text-white px-4 py-1 rounded hover:bg-[#FF4D5A] transition" onClick={openWhatsApp}>
-                Let's Talk
-              </button>
-            </motion.li>
-          </ul>
-        </motion.div>
 
         {/* Hero Content */}
         <div className="flex items-center justify-between">
