@@ -2,23 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedinIn, FaTwitter, FaTelegramPlane } from "react-icons/fa";
 
-const openWhatsApp = () => {
-  const phoneNumber = "9824633736";
-  const message = "Hi Kaushik, I visited your portfolio and would like to connect.";
-
-  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank");
-};
-
-
-const downloadResume = () => {
-  const link = document.createElement("a");
-  link.href = "../../public/Gemini_Generated_Image_muefglmuefglmuef.png";
-  link.download = "Kaushik-Resume.png";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
 
 const Hero = () => {
   return (
@@ -70,11 +53,11 @@ const Hero = () => {
               transition={{ delay: 0.9 }}
               className="flex gap-6"
             >
-              <button className="bg-[#FF4D5A] px-8 py-3 rounded-lg text-white font-semibold hover:bg-[#e63e4d] transition hover:scale-105" onClick={downloadResume}>
+              <button className="bg-[#FF4D5A] px-8 py-3 rounded-lg text-white font-semibold hover:bg-[#e63e4d] transition hover:scale-105">
                 Resume
               </button>
 
-              <button className="bg-[#2A4A78] px-8 py-3 rounded-lg text-white font-semibold hover:bg-[#203B63] transition hover:scale-105" onClick={openWhatsApp}>
+              <button className="bg-[#2A4A78] px-8 py-3 rounded-lg text-white font-semibold hover:bg-[#203B63] transition hover:scale-105">
                 Contact Me
               </button>
             </motion.div>
