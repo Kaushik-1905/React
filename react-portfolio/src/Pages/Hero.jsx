@@ -5,13 +5,13 @@ import { FaGithub, FaLinkedinIn, FaTwitter, FaTelegramPlane } from "react-icons/
 
 const Hero = () => {
   return (
-    <div className="min-h-screen bg-[#1F3A63] flex items-center justify-center p-6">
+    <div className="min-h-screen bg-[#FFEBEC] flex items-center justify-center p-6">
 
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative w-full max-w-6xl bg-[#223E6B] rounded-2xl border border-white/30 shadow-2xl p-10"
+        className="relative w-full max-w-6xl bg-[#E74B70] rounded-2xl border border-white/30 shadow-2xl p-10"
       >
 
 
@@ -33,9 +33,9 @@ const Hero = () => {
               initial={{ opacity: 0, x: -60 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-5xl font-bold text-white mb-4"
+              className="text-6xl font-bold text-white mb-4"
             >
-              I'm <span className="text-[#FF4D5A]">Kaushik</span>
+              I'm <span className="text-[#2B2F5C]">Kaushik</span>
             </motion.h1>
 
             <motion.p
@@ -45,6 +45,7 @@ const Hero = () => {
               className="text-2xl text-gray-300 mb-8"
             >
               I am a Web Developer
+              <p className="text-[16px] text-justify text-base/6">I'm a passionate Frontend Developer who genuinely loves turning ideas into beautiful, functional web experiences. I started coding out of curiosity and now I can't stop — there's something magical about writing a few lines and watching something come alive on a screen.</p>
             </motion.p>
 
             <motion.div
@@ -53,7 +54,7 @@ const Hero = () => {
               transition={{ delay: 0.9 }}
               className="flex gap-6"
             >
-              <button className="bg-[#FF4D5A] px-8 py-3 rounded-lg text-white font-semibold hover:bg-[#e63e4d] transition hover:scale-105">
+              <button className="bg-[#FFEBEC] px-8 py-3 rounded-lg text-black font-semibold hover:bg-[#203B63] hover:text-white transition hover:scale-105">
                 Resume
               </button>
 

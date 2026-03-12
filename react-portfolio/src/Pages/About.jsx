@@ -19,23 +19,23 @@ const facts = [
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-[#1F3A63] flex items-center justify-center p-6 py-12">
-      <div className="relative w-full max-w-6xl bg-[#223E6B] rounded-2xl border border-white/20 shadow-2xl p-10">
+    <div className="min-h-screen bg-[#FFEBEC] flex items-center justify-center p-6 py-12">
+      <div className="relative w-full max-w-6xl bg-[#E74B70] rounded-2xl border border-white/20 shadow-2xl p-10">
 
         {/* Section Title */}
         <div className="text-center mb-14">
-          <p className="text-[#FF4D5A] text-sm font-semibold tracking-widest uppercase mb-2">
+          <p className="text-[#2B2F5C] text-sm font-semibold tracking-widest uppercase mb-2">
             Get To Know Me
           </p>
           <h2 className="text-4xl font-bold text-white">
-            About <span className="text-[#FF4D5A]">Me</span>
+            About <span className="text-[#2B2F5C]">Me</span>
           </h2>
-          <div className="mx-auto mt-3 h-1 w-16 bg-[#FF4D5A] rounded-full" />
+          <div className="mx-auto mt-3 h-1 w-16 bg-white rounded-full" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-          {/* Left: Avatar + Stats */}
+          {/* Left: Avatar , Stats */}
           <div className="flex flex-col items-center gap-8">
             <div className="w-52 h-52 rounded-full bg-[#2B2F5C] border-4 border-[#FF4D5A]/40 flex items-center justify-center shadow-xl">
               <img
@@ -62,11 +62,11 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right: Story + Skills */}
+          {/* Right: Story , Skills */}
           <div className="flex flex-col gap-7">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-3">
-                Hey, I'm <span className="text-[#FF4D5A]">Kaushik</span>
+              <h3 className="text-4xl font-bold text-white mb-3">
+                Hey, I'm <span className="text-[#2B2F5C]">Kaushik</span>
               </h3>
               <p className="text-gray-300 leading-relaxed text-sm">
                 I'm a passionate Frontend Developer who genuinely loves turning ideas into
@@ -92,12 +92,12 @@ const About = () => {
                   <div key={i}>
                     <div className="flex justify-between text-sm mb-1">
                       <span className="text-gray-300">{skill.name}</span>
-                      <span className="text-[#FF4D5A] font-semibold">{skill.level}%</span>
+                      <span className="text-[#2B2F5C] font-semibold">{skill.level}%</span>
                     </div>
-                    <div className="h-2 bg-[#1F3A63] rounded-full overflow-hidden">
+                    <div className="h-2 bg-[white] rounded-full overflow-hidden">
                       <div
                         style={{ width: `${skill.level}%` }}
-                        className="h-full bg-gradient-to-r from-[#FF4D5A] to-[#ff8a93] rounded-full"
+                        className="h-full bg-linear-to-r from-[#2B2F5C] to-[#7a84f7] rounded-full"
                       />
                     </div>
                   </div>
@@ -105,7 +105,7 @@ const About = () => {
               </div>
             </div>
 
-            <button className="self-start bg-[#FF4D5A] px-8 py-3 rounded-lg text-white font-semibold hover:bg-[#e63e4d] transition mt-2">
+            <button className="self-start bg-[white] px-8 py-3 rounded-lg text-black font-semibold hover:bg-[#2B2F5C] hover:text-white transition mt-2">
               Download CV
             </button>
           </div>

@@ -72,7 +72,7 @@ const projects = [
 const PrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute left-[-20px] top-1/2 -translate-y-1/2 z-10 bg-[#FF4D5A] hover:bg-[#e63e4d] text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition"
+    className="absolute left-[-20px] top-1/2 -translate-y-1/2 z-10 bg-[#E74B70] hover:bg-[#2B2F5C] text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition"
   >
     <FaChevronLeft />
   </button>
@@ -81,7 +81,7 @@ const PrevArrow = ({ onClick }) => (
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute right-[-20px] top-1/2 -translate-y-1/2 z-10 bg-[#FF4D5A] hover:bg-[#e63e4d] text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition"
+    className="absolute right-[-20px] top-1/2 -translate-y-1/2 z-10 bg-[#E74B70] hover:bg-[#2B2F5C] text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition"
   >
     <FaChevronRight />
   </button>
@@ -104,29 +104,29 @@ const sliderSettings = {
 
 const Portfolio = () => {
   return (
-    <div className="min-h-screen bg-[#1F3A63] flex items-center justify-center p-6 py-12">
-      <div className="w-full max-w-6xl bg-[#223E6B] rounded-2xl border border-white/20 shadow-2xl p-10">
+    <div className="min-h-screen bg-[#FFEBEC] flex items-center justify-center p-6 py-12">
+      <div className="w-full max-w-6xl bg-[#E74B70] rounded-2xl border border-white/20 shadow-2xl p-10">
 
         {/* Header */}
         <div className="text-center mb-10">
-          <p className="text-[#FF4D5A] text-sm font-semibold tracking-widest uppercase mb-2">
+          <p className="text-[#2B2F5C] text-sm font-semibold tracking-widest uppercase mb-2">
             What I've Built
           </p>
           <h2 className="text-4xl font-bold text-white">
-            My <span className="text-[#FF4D5A]">Portfolio</span>
+            My <span className="text-[#2B2F5C]">Portfolio</span>
           </h2>
-          <div className="mx-auto mt-3 h-1 w-16 bg-[#FF4D5A] rounded-full" />
+          <div className="mx-auto mt-3 h-1 w-16 bg-[white] rounded-full" />
         </div>
 
-        {/* Category Buttons — decorative only, no onClick */}
+        {/* Buttons */}
         <div className="flex justify-center gap-3 flex-wrap mb-12">
           {categories.map((cat, i) => (
             <span
               key={i}
               className={`px-5 py-2 rounded-full text-sm font-semibold cursor-default select-none ${
                 cat === "All"
-                  ? "bg-[#FF4D5A] text-white"
-                  : "border border-white/20 text-gray-300"
+                  ? "bg-[#2B2F5C] text-white"
+                  : "border border-white/20 text-gray-200"
               }`}
             >
               {cat}
@@ -139,7 +139,7 @@ const Portfolio = () => {
           <Slider {...sliderSettings}>
             {projects.map((project, i) => (
               <div key={i} className="px-3">
-                <div className="bg-[#1F3A63] rounded-2xl border border-white/10 hover:border-[#FF4D5A]/50 transition-all duration-300 p-6 flex flex-col gap-4 h-full">
+                <div className="bg-[white] rounded-2xl border border-white/10 hover:border-[#FF4D5A]/50 transition-all duration-300 p-6 flex flex-col gap-4 h-full">
 
                   <div
                     className="w-14 h-14 rounded-xl flex items-center justify-center text-2xl"
@@ -155,7 +155,7 @@ const Portfolio = () => {
                     {project.category}
                   </span>
 
-                  <h3 className="text-white font-bold text-xl">{project.title}</h3>
+                  <h3 className="text[#2B2F5C] font-bold text-xl">{project.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed flex-1">{project.desc}</p>
 
                   <div className="flex flex-wrap gap-2">
@@ -174,7 +174,7 @@ const Portfolio = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition"
+                      className="flex items-center gap-2 text-sm text-[#FF4D5A] hover:text-black transition"
                     >
                       <FaGithub /> Code
                     </a>
@@ -182,7 +182,7 @@ const Portfolio = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-[#FF4D5A] hover:text-white transition"
+                      className="flex items-center gap-2 text-sm text-[#FF4D5A] hover:text-[#2B2F5C] transition"
                     >
                       <FaExternalLinkAlt /> Live Demo
                     </a>
@@ -193,13 +193,13 @@ const Portfolio = () => {
           </Slider>
         </div>
 
-        {/* Bottom CTA */}
+        {/* Bottom  */}
         <div className="text-center mt-6">
           <p className="text-gray-400 text-sm mb-4">
-            These are just the ones I'm proud enough to show 😄
+            These are just the ones I'm proud enough to show 
           </p>
           <a href="https://github.com/Kaushik-1905" target="_blank" rel="noopener noreferrer">
-            <button className="border border-[#FF4D5A] text-[#FF4D5A] px-8 py-3 rounded-lg font-semibold hover:bg-[#FF4D5A] hover:text-white transition">
+            <button className="border border-[white] text-[black] px-8 py-3 rounded-lg font-semibold hover:bg-[#2B2F5C] hover:text-white transition hover:border-none">
               See All on GitHub
             </button>
           </a>

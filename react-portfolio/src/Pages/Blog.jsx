@@ -83,18 +83,18 @@ const rest = blogs.filter((b) => !b.featured);
 
 const Blog = () => {
   return (
-    <div className="min-h-screen bg-[#1F3A63] flex items-center justify-center p-6 py-12">
-      <div className="w-full max-w-6xl bg-[#223E6B] rounded-2xl border border-white/20 shadow-2xl p-10">
+    <div className="min-h-screen bg-[#FFEBEC] flex items-center justify-center p-6 py-12">
+      <div className="w-full max-w-6xl bg-[#E74B70] rounded-2xl border border-white/20 shadow-2xl p-10">
 
         {/* Header */}
         <div className="text-center mb-10">
-          <p className="text-[#FF4D5A] text-sm font-semibold tracking-widest uppercase mb-2">
+          <p className="text-[#2B2F5C] text-sm font-semibold tracking-widest uppercase mb-2">
             Thoughts & Learnings
           </p>
           <h2 className="text-4xl font-bold text-white">
-            My <span className="text-[#FF4D5A]">Blog</span>
+            My <span className="text-[#2B2F5C]">Blog</span>
           </h2>
-          <div className="mx-auto mt-3 h-1 w-16 bg-[#FF4D5A] rounded-full" />
+          <div className="mx-auto mt-3 h-1 w-16 bg-[white] rounded-full" />
           <p className="text-gray-400 mt-4 text-sm max-w-md mx-auto">
             Things I've figured out, broken, fixed, and decided to write about so you don't have to go through the same pain.
           </p>
@@ -108,7 +108,7 @@ const Blog = () => {
               type="text"
               placeholder="Search posts..."
               readOnly
-              className="w-full bg-[#1F3A63] border border-white/10 rounded-lg pl-9 pr-4 py-2 text-sm text-white placeholder-gray-500 outline-none cursor-default"
+              className="w-full bg-[white] border border-white/10 rounded-lg pl-9 pr-4 py-2 text-sm text-black placeholder-gray-500 outline-none cursor-default"
             />
           </div>
 
@@ -118,7 +118,7 @@ const Blog = () => {
                 key={i}
                 className={`px-4 py-1.5 rounded-full text-xs font-semibold cursor-default select-none ${
                   tag === "All"
-                    ? "bg-[#FF4D5A] text-white"
+                    ? "bg-[#2B2F5C] text-white"
                     : "border border-white/20 text-gray-300"
                 }`}
               >
@@ -134,7 +134,7 @@ const Blog = () => {
           {rest.map((blog) => (
             <div
               key={blog.id}
-              className="bg-[#1F3A63] rounded-2xl border border-white/10 hover:border-[#FF4D5A]/50 transition-all duration-300 p-6 flex flex-col gap-4 group cursor-pointer"
+              className="bg-[white] text-black rounded-2xl border border-white/10 hover:border-[#FF4D5A]/50 transition-all duration-300 p-6 flex flex-col gap-4 group cursor-pointer"
             >
               <div
                 className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
@@ -150,7 +150,7 @@ const Blog = () => {
                 {blog.tag}
               </span>
 
-              <h3 className="text-white font-bold text-lg leading-snug group-hover:text-[#FF4D5A] transition">
+              <h3 className="text-[#2B2F5C] font-bold text-lg leading-snug group-hover:text-[#FF4D5A] transition">
                 {blog.title}
               </h3>
 
