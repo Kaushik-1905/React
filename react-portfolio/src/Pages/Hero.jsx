@@ -11,7 +11,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative w-full max-w-6xl bg-[#E74B70] rounded-2xl border border-white/30 shadow-2xl p-10"
+        className="relative w-full max-w-6xl bg-[#E74B70] rounded-2xl border border-white/30 shadow-2xl p-26"
       >
 
 

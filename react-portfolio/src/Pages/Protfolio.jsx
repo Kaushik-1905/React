@@ -72,7 +72,7 @@ const projects = [
 const PrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute left-[-20px] top-1/2 -translate-y-1/2 z-10 bg-[#E74B70] hover:bg-[#2B2F5C] text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition"
+    className="absolute -left-5 top-1/2 -translate-y-1/2 z-10 bg-[#E74B70] hover:bg-[#2B2F5C] text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition"
   >
     <FaChevronLeft />
   </button>
@@ -81,7 +81,7 @@ const PrevArrow = ({ onClick }) => (
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute right-[-20px] top-1/2 -translate-y-1/2 z-10 bg-[#E74B70] hover:bg-[#2B2F5C] text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition"
+    className="absolute -right-5 top-1/2 -translate-y-1/2 z-10 bg-[#E74B70] hover:bg-[#2B2F5C] text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition"
   >
     <FaChevronRight />
   </button>
