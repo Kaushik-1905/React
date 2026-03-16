@@ -3,8 +3,8 @@ import productReducer from "./ProductReducer";
 import cartReducer from "./CartReducer";
 
 const rootReducer = combineReducers({
-    productSatae: productReducer,
-    cartState: cartReducer
+  productState: productReducer,   
+  cartState: cartReducer,
 });
 
 export default rootReducer;

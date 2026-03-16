@@ -99,15 +99,15 @@ const Hero = () => {
             },
             {
               icon: FaLinkedinIn,
-              link: "https://www.linkedin.com/in/kaushik-undefined-2899103a1/",
+              link: "https://github.com/Kaushik-1905/React",
             },
             {
               icon: FaTwitter,
-              link: "https://x.com/home",
+              link: "https://github.com/Kaushik-1905/React",
             },
             {
               icon: FaTelegramPlane,
-              link: "https://web.telegram.org/k/",
+              link: "https://github.com/Kaushik-1905/React",
             },
           ].map((item, index) => {
             const Icon = item.icon;
@@ -118,7 +118,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.3 }}
-                className="cursor-pointer hover:text-[#FF4D5A] transition"
+                className="cursor-pointer hover:text-[white] transition cursor:pointer"
               >
                 <Icon />
               </motion.a>

@@ -41,6 +41,24 @@
       "name": "SUraj",
       "price": 465,
       "category": "Suraj"
+    },
+    {
+      "id": "c308",
+      "name": "Shop",
+      "price": 44,
+      "category": "Shop"
+    },
+    {
+      "id": "1b68",
+      "name": "Toy",
+      "price": 5,
+      "category": "Toys"
+    },
+    {
+      "id": "1942",
+      "name": "Toys",
+      "price": 5,
+      "category": "Toys"
     }
   ]
 }

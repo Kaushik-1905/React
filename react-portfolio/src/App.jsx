@@ -12,25 +12,25 @@ function Home() {
     <>
       <Hero />
       <About />
-      <Portfolio/>
-      <Blog/>
+      <Portfolio />
+      <Blog />
     </>
   );
 }
 
 function App() {
   return (
-    <AnimatePresence mode="wait">
-      <div key="main">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/blog" element={<Blog />} />
-        </Routes>
-      </div>
-    </AnimatePresence>
+      <AnimatePresence mode="wait">
+        <div key="main">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/blog" element={<Blog />} />
+          </Routes>
+        </div>
+      </AnimatePresence>
   );
 }
 

@@ -1,14 +1,6 @@
-import React from "react";
+import { createStore } from "redux";
+import rootReducer from "./redux/reducers/rootReducer";
 
-const initialState = {
-  products: []
-};
+const store = createStore(rootReducer);
 
-const ProductReducer = (state = initialState, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
-
-export default ProductReducer;
+export default store;

@@ -1,19 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import ProductForm from './componets/ProductForm'
+import ProductForm from './componets/ProductForm';
+import ProductList from './componets/ProductList';  
+import Cart from './componets/Cart';                  
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <ProductForm/>
-      </div>
+      <h1>Redux Shop</h1>
+      <ProductForm />
+      <hr />
+      <ProductList />
+      <hr />
+      <Cart />
     </>
-  )
+  );
 }
 
 export default App;
